@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv && declare -F | cut -d ' ' -f3
+{ printenv; declare -F; }
