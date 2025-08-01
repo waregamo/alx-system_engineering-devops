@@ -1,2 +1,2 @@
 #!/bin/bash
-cat <(printenv) <(declare -F)
+cat <(env) <(declare -F)
