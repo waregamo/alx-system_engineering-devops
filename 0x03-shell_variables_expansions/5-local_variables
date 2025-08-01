@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv$(printf '\n')declare -F
+cat <(printenv) <(declare -F)
