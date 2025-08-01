@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# List all environment variables and local variables
+set
+
+# List all functions
+declare -f
