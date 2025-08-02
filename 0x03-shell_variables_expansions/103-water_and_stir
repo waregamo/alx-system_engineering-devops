@@ -1,2 +1,2 @@
 #!/bin/bash
-f(){ i=$1 x=$2 a=0; while [ $a -lt ${#x} ]; do y=${x:a:1}; for j in {0..4}; do [ "$y" = "${i:j:1}" ] && n=$((n*5 + j)); done; a=$((a+1)); done; echo $n; }; x=$(f eewatr "$WATER") y=$(f .itir "$STIR") z=$((x + y)) b=bestchol; r=""; while [ $z -gt 0 ]; do r="${b:z%9:1}$r"; z=$((z/9)); done; echo $r
+echo "$(( $(echo ${WATER} | tr 'water' '01234') + $(echo ${STIR//./} | tr 'stir' '01234') ))" | tr '0123456789' 'bestchol'
