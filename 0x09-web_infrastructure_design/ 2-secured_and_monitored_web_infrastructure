@@ -1,0 +1,24 @@
+## Simple Web Stack Diagram
+![Simple Web Stack](https://imgur.com/AoYa5PI)
+
+### Explanations:
+2nd Server: For redundancy and load distribution.
+
+Load Balancer: Distributes traffic evenly across servers.
+
+Firewalls: Block unauthorized access (ports, IPs).
+
+HTTPS: Encrypts traffic for security.
+
+Monitoring: Tracks performance, detects issues.
+
+Data Collection: Agents collect metrics (CPU, memory, etc.) and send to monitoring service.
+
+Monitor QPS: Configure monitoring to track requests per second.
+
+### Issues:
+SSL Termination at LB: Traffic between LB and servers is unencrypted.
+
+Single Write MySQL: Primary failure stops write operations.
+
+Identical Components: Limits specialization optimization.

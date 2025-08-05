@@ -1,0 +1,30 @@
+## Simple Web Stack Diagram
+![Simple Web Stack](https://imgur.com/xNP8mZA)
+
+### Explanations:
+2nd Server: For redundancy and load distribution.
+
+Load Balancer: Distributes traffic evenly across servers.
+
+Distribution Algorithm: Round-robin (default) - cycles through servers sequentially.
+
+Active-Active vs Active-Passive:
+
+Active-Active: All servers handle traffic.
+
+Active-Passive: Backup servers only take over when primary fails.
+
+Primary-Replica Cluster:
+
+Primary: Handles all write operations.
+
+Replica: Syncs with primary and handles read operations.
+
+Difference: Application writes to primary, reads can use replica.
+
+### Issues:
+SPOFs: Load balancer, primary database.
+
+Security Issues: No firewall, unencrypted traffic.
+
+No Monitoring: Can't track performance/issues.

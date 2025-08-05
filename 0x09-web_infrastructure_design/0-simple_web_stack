@@ -1,0 +1,24 @@
+## Simple Web Stack Diagram
+![Simple Web Stack](https://imgur.com/a/upCNNsk)
+
+### Explanations:
+Server: A computer or system that provides resources/services to other computers (clients) over a network.
+
+Domain Name Role: Human-readable address that maps to an IP address via DNS.
+
+www DNS Record: CNAME record that points to foobar.com (or A record pointing to 8.8.8.8).
+
+Web Server Role: Handles HTTP requests, serves static content, and forwards dynamic requests to application server.
+
+Application Server Role: Executes application logic and processes dynamic content.
+
+Database Role: Stores, manages, and retrieves application data.
+
+Communication: Uses HTTP/HTTPS protocols over TCP/IP.
+
+### Issues:
+SPOF: Single point of failure - if server goes down, entire site is down.
+
+Downtime during Maintenance: Need to take server offline for updates.
+
+Scaling Limitations: Cannot handle high traffic loads.
