@@ -1,0 +1,61 @@
+## Application server vs web server Diagram
+![Scale up](https://imgur.com/a/eiA09Pi)
+
+### Explanations:
+Dual Load Balancers (Active-Active HAProxy cluster)
+
+Distributes traffic using round-robin algorithm
+
+Provides failover capability
+
+Web Server Tier (Multiple Nginx servers)
+
+Handles HTTP/HTTPS requests
+
+Serves static content
+
+Reverse proxies to application servers
+
+Application Server Tier (Multiple app servers)
+
+Runs business logic
+
+Processes dynamic content
+
+Connects to database
+
+Database Cluster (MySQL Primary-Replica)
+
+Primary handles all writes
+
+Replicas handle read queries
+
+Automatic failover capability
+
+Monitoring Clients (On each server)
+
+Collect performance metrics
+
+Send to central monitoring service
+
+Enable alerting
+
+Firewall (Centralized)
+
+Filters incoming/outgoing traffic
+
+Implements security rules
+
+Protects all backend servers
+
+This architecture provides:
+
+Horizontal scaling at each layer
+
+Redundancy for high availability
+
+Separation of concerns
+
+Better resource utilization
+
+Improved fault isolation
